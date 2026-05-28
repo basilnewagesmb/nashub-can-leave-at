@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "NAS HUB — Can Leave At",
+  "version": "1.0.0",
+  "description": "Adds a 'Can Leave At' column to the WFO table on NAS HUB (IN + 8h work + break time).",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "NAS HUB — Can Leave At",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://nashub.newagesysindia.com/time-tracker/wfo*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
